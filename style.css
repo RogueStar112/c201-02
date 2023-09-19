@@ -1,0 +1,221 @@
+/* Asiimov II color palette created by taubone that consists #fe6903,#0f0f0f,#333333,#c5c5c5,#f0f0f0 colors. */
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f0f0f0;
+}
+
+hr {
+  border: 2px solid #fe6903;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 3px hsla(24, 100%, 50%, 0.404);
+}
+
+/* HEAD SECTION */
+
+header {
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  padding: 20px 0;
+}
+
+h1 {
+  color: #fe6903;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 2.5rem;
+  font-weight: 500;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+nav ul {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-top: 15px;
+  margin-left: 37px;
+}
+
+a {
+  color: #f0f0f0;
+  font-family: "Share Tech Mono", monospace;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@keyframes ornghvr {
+  0% {
+    color: #f0f0f0;
+  }
+
+  100% {
+    color: #fe6903;
+  }
+}
+
+a:hover::before {
+  content: ">_";
+  color: #fe6903;
+  animation-name: ornghvr;
+  animation-duration: 0.3s;
+}
+
+a:hover {
+  color: #fe6903;
+  animation-name: ornghvr;
+  animation-duration: 0.3s;
+}
+
+/* END OF HEAD SECTION */
+
+/* BEGINNING OF MAIN SECTION */
+
+main {
+  background-color: #f0f0f0;
+  padding-top: 1%;
+}
+
+.about-me-sctn {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.about-me-sctn p {
+  margin: 0.2% 0;
+}
+
+h2 {
+  color: #fe6903;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2:hover::before,
+h3:hover::before {
+  content: ">_";
+}
+
+main p {
+  line-height: 150%;
+}
+
+main p:not(:first-of-type) {
+  padding-top: 10px;
+}
+
+.fun-facts,
+.hobbies {
+  width: 60%;
+  margin: 0 auto;
+}
+
+h3 {
+  color: #fe6903;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 10px 0 0 0;
+}
+
+.fun-facts ul li:first-of-type,
+.hobbies ul li:first-of-type {
+  padding-top: 5px;
+}
+
+.fun-facts ul li,
+.hobbies ul li {
+  line-height: 175%;
+}
+
+.fun-facts ul li:last-of-type,
+.hobbies ul li:last-of-type {
+  padding-bottom: 20px;
+}
+
+.fun-facts ul li::before,
+.hobbies ul li::before {
+  color: #fe6903;
+  content: "+";
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding-right: 10px;
+}
+
+/* END OF MAIN SECTION */
+
+/* BEGINNING OF BIRDS SECTION */
+
+.birds-area {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.birds-area h2 {
+  padding: 30px 0 10px 0;
+}
+
+.birds-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3);
+  font-weight: 600;
+}
+
+.birds-images img {
+  object-fit: contain;
+  margin: 0 auto;
+  background-color: #0f0f0f;
+}
+
+.birds-images figure {
+  padding-top: 30px;
+  margin: 0 auto;
+}
+
+.birds-images figcaption {
+  background-color: #0f0f0f;
+  color: #fe6903;
+  padding: 2%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.img-wrap {
+  width: 320px;
+}
+
+/* END OF BIRDS SECTION */
+
+/* BEGINNING OF FOOTER SECTION */
+
+footer {
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+}
+
+.footer-container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  padding: 20px 0;
+}
+
+.heart {
+  font-size: 1.5rem;
+}
+
+.heart:hover {
+  font-size: 5rem;
+}
+
+/* END OF FOOTER SECTION */
