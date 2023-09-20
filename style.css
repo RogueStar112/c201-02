@@ -151,6 +151,37 @@ h3 {
   padding-right: 10px;
 }
 
+.quiz-btn-cntnr {
+  text-align: center;
+}
+
+.quiz-btn {
+  background-color: #fe6903;
+  border: none;
+  color: #0f0f0f;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  transition-duration: 0.3s;
+}
+
+.quiz-btn:hover {
+  box-shadow: 0 8px 15px 2px hsla(24, 100%, 50%, 0.712);
+  border: 1px solid #fe5303;
+}
+
+.quiz-btn:hover::before {
+  content: ">_";
+}
+
+.quiz-btn:active {
+  background-color: #0f0f0f;
+  color: #fe6903;
+}
+
 /* END OF MAIN SECTION */
 
 /* BEGINNING OF BIRDS SECTION */
