@@ -112,9 +112,13 @@ main p {
 main p:not(:first-of-type) {
   padding-top: 10px;
 }
+main p:last-of-type {
+  padding-bottom: 20px;
+}
 
 .fun-facts,
-.hobbies {
+.hobbies,
+.top-ten {
   width: 60%;
   margin: 0 auto;
 }
@@ -127,22 +131,26 @@ h3 {
 }
 
 .fun-facts ul li:first-of-type,
-.hobbies ul li:first-of-type {
+.hobbies ul li:first-of-type,
+.top-ten ul li:first-of-type {
   padding-top: 5px;
 }
 
 .fun-facts ul li,
-.hobbies ul li {
+.hobbies ul li,
+.top-ten ul li {
   line-height: 175%;
 }
 
 .fun-facts ul li:last-of-type,
-.hobbies ul li:last-of-type {
+.hobbies ul li:last-of-type,
+.top-ten ul li:last-of-type {
   padding-bottom: 20px;
 }
 
 .fun-facts ul li::before,
-.hobbies ul li::before {
+.hobbies ul li::before,
+.top-ten ul li::before {
   color: #fe6903;
   content: "+";
   font-family: "Share Tech Mono", monospace;
@@ -186,8 +194,12 @@ h3 {
 
 /* BEGINNING OF BIRDS SECTION */
 
+#birds-link {
+  width: 80%;
+}
+
 .birds-area {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -205,12 +217,15 @@ h3 {
 .birds-images img {
   object-fit: contain;
   margin: 0 auto;
+  margin-bottom: -2px;
   background-color: #0f0f0f;
+  border: 1px solid #0f0f0f;
 }
 
 .birds-images figure {
   padding-top: 30px;
   margin: 0 auto;
+  padding: 30px 5px 0 5px;
 }
 
 .birds-images figcaption {

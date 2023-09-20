@@ -15,7 +15,7 @@ function quizTime() {
   let choices = "Yes/no (y/n)?";
 
   function qOneStart() {
-    let qOne = prompt(`I have lived in multiple countries. ${choices}`).toLowerCase();
+    let qOne = prompt(`I have lived in multiple countries. ${choices}`).toLowerCase().trim();
 
     if (qOne === "y" || qOne === "yes") {
       alert("✅ Nice one, you got that one right. +1 to you.");
@@ -37,7 +37,7 @@ function quizTime() {
   qOneStart();
 
   function qTwoStart() {
-    let qTwo = prompt(`I have completed University at King's College London. ${choices}`).toLowerCase();
+    let qTwo = prompt(`I have completed University at King's College London. ${choices}`).toLowerCase().trim();
 
     if (qTwo === "y" || qTwo === "yes") {
       alert("❌ WRONG - I didn't finish university!");
@@ -53,7 +53,7 @@ function quizTime() {
   qTwoStart();
 
   function qThreeStart() {
-    let qThree = prompt(`I own dogs. ${choices}`).toLowerCase();
+    let qThree = prompt(`I own dogs. ${choices}`).toLowerCase().trim();
 
     if (qThree === "y" || qThree === "yes") {
       alert("❌ WRONG - I own birds, not dogs!");
@@ -72,7 +72,7 @@ function quizTime() {
   qThreeStart();
 
   function qFourStart() {
-    let qFour = prompt(`My favorite music genres are Rock & Metal. ${choices}`).toLowerCase();
+    let qFour = prompt(`My favorite music genres are Rock & Metal. ${choices}`).toLowerCase().trim();
 
     if (qFour === "y" || qFour === "yes") {
       alert("✅ Correct, I listen to multiple genres but those two are my favorite.");
@@ -91,7 +91,7 @@ function quizTime() {
   qFourStart();
 
   function qFiveStart() {
-    let qFive = prompt(`I self-taught English. ${choices}`).toLowerCase();
+    let qFive = prompt(`I self-taught English. ${choices}`).toLowerCase().trim();
 
     if (qFive === "y" || qFive === "yes") {
       alert("✅ That's right! I started out with cartoons and music!");
@@ -109,7 +109,28 @@ function quizTime() {
   }
   qFiveStart();
 
-  alert(`${username}, you have completed my quiz and you have a final score of ${scoreCounter}/5. Nice one!`);
+  function qSixStart() {
+    let correctGuess = 8;
+    let qSix = parseInt(prompt("Guess a number between 1 and 10."));
+
+    if (qSix < correctGuess) {
+      alert("Too low. Guess again. GO HIGHER!!");
+      qSixStart();
+    } else if (qSix > correctGuess) {
+      alert("Too high. Guess again. Go lower!");
+      qSixStart();
+    } else if (qSix === correctGuess) {
+      alert("✅ That's the correct guess!");
+      scoreCounter++;
+    } else if (isNaN(parseInt(qSix))) {
+      alert("Try again, with a number this time.");
+      qSixStart();
+    }
+  }
+
+  qSixStart();
+
+  alert(`${username}, you have completed my quiz and you have a final score of ${scoreCounter}/6. Nice one!`);
 }
 
 document.getElementById("quiz-btn-start").addEventListener("click", quizTime);
