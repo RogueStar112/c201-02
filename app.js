@@ -129,21 +129,40 @@ function quizTime() {
 
   // Defines a random number when the question starts
   let correctGuess = Math.floor(Math.random() * 11);
-  function qSixStart() {
-    let qSix = parseInt(prompt("Guess a number between 1 and 10."));
+  let attemptsLeft = 4;
 
-    if (qSix < correctGuess) {
-      alert("Too low. Guess again. GO HIGHER!!");
-      qSixStart();
-    } else if (qSix > correctGuess) {
-      alert("Too high. Guess again. Go lower!");
-      qSixStart();
-    } else if (qSix === correctGuess) {
-      alert("✅ That's the correct guess!");
-      scoreCounter++;
-    } else if (isNaN(parseInt(qSix))) {
-      alert("Try again, with a number this time.");
-      qSixStart();
+  console.log(`Your random number is: ${correctGuess}`);
+
+  /*
+  Took out recursion - so this question would work.
+  */
+  function qSixStart() {
+    while (attemptsLeft > 0) {
+      let qSix = parseInt(prompt("Guess a number between 1 and 10."));
+
+      if (qSix < correctGuess) {
+        /* If Number Lesser than Correct guess*/
+
+        attemptsLeft--;
+        alert(
+          `Too low. Guess again. GO HIGHER!! You have ${attemptsLeft} left`
+        );
+      } else if (qSix > correctGuess) {
+        /* If Number Greater than Correct guess*/
+
+        alert(
+          `Too high. Guess again. Go lower! You have ${attemptsLeft} left.`
+        );
+        attemptsLeft--;
+      } else if (qSix === correctGuess) {
+        /* If guess is correct*/
+        alert("✅ That's the correct guess!");
+        scoreCounter++;
+        break;
+      } else if (isNaN(parseInt(qSix))) {
+        /* If guess is not a valid alue*/
+        alert("Try again, with a number this time.");
+      }
     }
   }
 
