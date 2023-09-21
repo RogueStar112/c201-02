@@ -138,30 +138,35 @@ function quizTime() {
   */
   function qSixStart() {
     while (attemptsLeft > 0) {
+      attemptsLeft--;
       let qSix = parseInt(prompt("Guess a number between 1 and 10."));
 
-      if (qSix < correctGuess) {
-        /* If Number Lesser than Correct guess*/
-
-        attemptsLeft--;
-        alert(
-          `Too low. Guess again. GO HIGHER!! You have ${attemptsLeft} left`
-        );
-      } else if (qSix > correctGuess) {
-        /* If Number Greater than Correct guess*/
-
-        alert(
-          `Too high. Guess again. Go lower! You have ${attemptsLeft} left.`
-        );
-        attemptsLeft--;
-      } else if (qSix === correctGuess) {
+      if (qSix === correctGuess) {
         /* If guess is correct*/
         alert("✅ That's the correct guess!");
         scoreCounter++;
         break;
+      } else if (qSix < correctGuess) {
+        /* If Number Lesser than Correct guess*/
+
+        alert(`Your guess was too low. You have ${attemptsLeft} guesses left.`);
+        // attemptsLeft--;
+      } else if (qSix > correctGuess) {
+        /* If Number Greater than Correct guess*/
+
+        alert(
+          `Your guess was too high. You have ${attemptsLeft} guesses left.`
+        );
+        // attemptsLeft--;
       } else if (isNaN(parseInt(qSix))) {
-        /* If guess is not a valid alue*/
+        /* If guess is not a valid value*/
         alert("Try again, with a number this time.");
+      }
+
+      if (attemptsLeft === 0) {
+        alert(
+          `Sorry, you have no more attempts left. The answer is ${correctGuess}.`
+        );
       }
     }
   }
