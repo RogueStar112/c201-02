@@ -1,7 +1,9 @@
 // Prompting for username and greeting
 
 // !DON'T FORGET TO UNCOMMENT BEFORE PUSH
-let username = prompt("Hello, welcome to my little corner of the internet. What is your name?");
+let username = prompt(
+  "Hello, welcome to my little corner of the internet. What is your name?"
+);
 
 while (!username) {
   username = prompt("You shall not pass if you don't tell me your name.");
@@ -15,7 +17,9 @@ function quizTime() {
   let choices = "Yes/no (y/n)?";
 
   function qOneStart() {
-    let qOne = prompt(`I have lived in multiple countries. ${choices}`).toLowerCase().trim();
+    let qOne = prompt(`I have lived in multiple countries. ${choices}`)
+      .toLowerCase()
+      .trim();
 
     if (qOne === "y" || qOne === "yes") {
       alert("✅ Nice one, you got that one right. +1 to you.");
@@ -37,7 +41,11 @@ function quizTime() {
   qOneStart();
 
   function qTwoStart() {
-    let qTwo = prompt(`I have completed University at King's College London. ${choices}`).toLowerCase().trim();
+    let qTwo = prompt(
+      `I have completed University at King's College London. ${choices}`
+    )
+      .toLowerCase()
+      .trim();
 
     if (qTwo === "y" || qTwo === "yes") {
       alert("❌ WRONG - I didn't finish university!");
@@ -72,15 +80,21 @@ function quizTime() {
   qThreeStart();
 
   function qFourStart() {
-    let qFour = prompt(`My favorite music genres are Rock & Metal. ${choices}`).toLowerCase().trim();
+    let qFour = prompt(`My favorite music genres are Rock & Metal. ${choices}`)
+      .toLowerCase()
+      .trim();
 
     if (qFour === "y" || qFour === "yes") {
-      alert("✅ Correct, I listen to multiple genres but those two are my favorite.");
+      alert(
+        "✅ Correct, I listen to multiple genres but those two are my favorite."
+      );
       // console.log("✅ Correct, I listen to multiple genres but those two are my favorite.");
       scoreCounter++;
       // console.log(`Current score: ${scoreCounter}`);
     } else if (qFour === "n" || qFour === "no") {
-      alert("❌ WRONG - They are my favorite genres! I do listen to a variety of music, however.");
+      alert(
+        "❌ WRONG - They are my favorite genres! I do listen to a variety of music, however."
+      );
       // console.log("❌ WRONG - They are my favorite genres! I do listen to a variety of music, however.");
       // console.log(`Current score: ${scoreCounter}`);
     } else {
@@ -91,7 +105,9 @@ function quizTime() {
   qFourStart();
 
   function qFiveStart() {
-    let qFive = prompt(`I self-taught English. ${choices}`).toLowerCase().trim();
+    let qFive = prompt(`I self-taught English. ${choices}`)
+      .toLowerCase()
+      .trim();
 
     if (qFive === "y" || qFive === "yes") {
       alert("✅ That's right! I started out with cartoons and music!");
@@ -99,7 +115,9 @@ function quizTime() {
       scoreCounter++;
       // console.log(`Current score: ${scoreCounter}`);
     } else if (qFive === "n" || qFive === "no") {
-      alert("❌ WRONG - I did learn English by myself from cartoons, movies, music, tv shows, etc.");
+      alert(
+        "❌ WRONG - I did learn English by myself from cartoons, movies, music, tv shows, etc."
+      );
       // console.log("❌ WRONG - I did learn English by myself from cartoons, movies, music, tv shows, etc.");
       // console.log(`Current score: ${scoreCounter}`);
     } else {
@@ -109,8 +127,9 @@ function quizTime() {
   }
   qFiveStart();
 
+  // Defines a random number when the question starts
+  let correctGuess = Math.floor(Math.random() * 11);
   function qSixStart() {
-    let correctGuess = 8;
     let qSix = parseInt(prompt("Guess a number between 1 and 10."));
 
     if (qSix < correctGuess) {
@@ -130,7 +149,9 @@ function quizTime() {
 
   qSixStart();
 
-  alert(`${username}, you have completed my quiz and you have a final score of ${scoreCounter}/6. Nice one!`);
+  alert(
+    `${username}, you have completed my quiz and you have a final score of ${scoreCounter}/6. Nice one!`
+  );
 }
 
 document.getElementById("quiz-btn-start").addEventListener("click", quizTime);
