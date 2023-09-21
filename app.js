@@ -1,13 +1,13 @@
 // Prompting for username and greeting
 
 // !DON'T FORGET TO UNCOMMENT BEFORE PUSH
-// let username = prompt("Hello, welcome to my little corner of the internet. What is your name?");
+let username = prompt("Hello, welcome to my little corner of the internet. What is your name?");
 
-// while (!username) {
-//   username = prompt("You shall not pass if you don't tell me your name.");
-// }
+while (!username) {
+  username = prompt("You shall not pass if you don't tell me your name.");
+}
 
-// alert(`Nice to meet you ${username}, I hope you are having a fantastic day.`);
+alert(`Nice to meet you ${username}, I hope you are having a fantastic day.`);
 
 // !Beginning of 5 questions prompt
 function quizTime() {
